@@ -1,3 +1,5 @@
+@use "sass:color";
+
 @if index($btn-types, default) {
 
   /* == Default == */
@@ -5,14 +7,14 @@
     background-color: #92929d;
 
     &:active {
-      background-color: darken(#92929d, 10%);
+      background-color: color.adjust(#92929d, $lightness:10%);
     }
 
     @media (hover: hover) {
 
       &:hover,
       &:focus {
-        background-color: lighten(#92929d, 10%);
+        background-color: color.adjust(#92929d, $lightness:10%);
       }
     }
 
